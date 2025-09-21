@@ -1,0 +1,151 @@
+.voiceNavigation {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.voiceControls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.voiceButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.voiceButton:hover {
+  background: #1d4ed8;
+}
+
+.voiceButton:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.voiceButton.listening {
+  background: #dc2626;
+  animation: pulse 2s infinite;
+}
+
+.speakButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #059669;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.speakButton:hover {
+  background: #047857;
+}
+
+.speakButton:focus {
+  outline: 3px solid #6ee7b7;
+  outline-offset: 2px;
+}
+
+.lastCommand {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #1e40af;
+}
+
+.commandButtons h3 {
+  margin-bottom: 0.75rem;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.commandButton {
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.commandButton:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.commandButton:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+.voiceHelp {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  color: #92400e;
+}
+
+.voiceHelp strong {
+  color: #78350f;
+}
+
+/* Patient-specific styling */
+.voiceNavigation {
+  margin-bottom: 2rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .voiceControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .buttonGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .voiceButton,
+  .speakButton {
+    justify-content: center;
+  }
+}

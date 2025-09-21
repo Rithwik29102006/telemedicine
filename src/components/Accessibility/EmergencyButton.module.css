@@ -1,0 +1,135 @@
+.emergencyContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emergencyButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #dc2626;
+  color: white;
+  border: 3px solid #b91c1c;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.emergencyButton:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+.emergencyButton:focus {
+  outline: 4px solid #fca5a5;
+  outline-offset: 2px;
+}
+
+.emergencyButton:active,
+.emergencyButton.holding {
+  transform: scale(0.95);
+  background: #991b1b;
+}
+
+.emergencyButton.triggering {
+  background: #059669;
+  border-color: #047857;
+  animation: pulse 1s infinite;
+}
+
+.emergencyButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 2;
+  position: relative;
+}
+
+.buttonText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #fbbf24;
+  transition: width 0.1s linear;
+  z-index: 1;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  color: #374151;
+  text-align: center;
+  max-width: 120px;
+  line-height: 1.3;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* High contrast mode */
+:global(.high-contrast) .emergencyButton {
+  border-width: 4px;
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+:global(.high-contrast) .emergencyButton:hover {
+  background: #333;
+}
+
+:global(.high-contrast) .emergencyButton:focus {
+  outline: 4px solid #ffff00;
+}
+
+/* Large text mode */
+:global(.large-text) .buttonText {
+  font-size: 0.875rem;
+}
+
+:global(.large-text) .instructions {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .emergencyButton {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .buttonText {
+    font-size: 0.7rem;
+  }
+  
+  .instructions {
+    font-size: 0.7rem;
+  }
+}

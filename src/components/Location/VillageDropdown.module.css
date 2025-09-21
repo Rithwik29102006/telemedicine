@@ -1,0 +1,125 @@
+.villageDropdown {
+  width: 100%;
+}
+
+.searchContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.searchContainer svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.villageList {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+}
+
+.villageItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.villageItem:last-child {
+  border-bottom: none;
+}
+
+.villageItem:hover {
+  background: #f8fafc;
+}
+
+.villageItem:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+  background: #f8fafc;
+}
+
+.villageItem.selected {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.villageItem svg {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.villageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.villageName {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.villageDistrict {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+  font-style: italic;
+}
+
+.selectedInfo {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+}
+
+.selectedInfo p {
+  margin-bottom: 1rem;
+  color: #0c4a6e;
+}
+
+.selectedInfo .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .villageList {
+    max-height: 250px;
+  }
+  
+  .villageItem {
+    padding: 1rem 0.75rem;
+  }
+}

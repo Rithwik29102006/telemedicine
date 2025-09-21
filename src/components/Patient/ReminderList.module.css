@@ -1,0 +1,167 @@
+.reminderList {
+  padding: 2rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.addReminderForm {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.addReminderForm h3 {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+}
+
+.emptyState svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  margin-bottom: 2rem;
+}
+
+.reminders {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reminderCard {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.reminderCard:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reminderCard.disabled {
+  opacity: 0.6;
+  background: #f8fafc;
+}
+
+.reminderInfo {
+  flex: 1;
+}
+
+.medicineInfo h4 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.timeInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #059669;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.frequency {
+  color: #64748b;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.snoozeInfo {
+  color: #ea580c;
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.reminderActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .header button {
+    align-self: stretch;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .reminderList {
+    padding: 1rem 0;
+  }
+  
+  .reminderCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .reminderActions {
+    align-self: stretch;
+    flex-direction: column;
+  }
+  
+  .emptyState {
+    padding: 3rem 1rem;
+  }
+}

@@ -1,0 +1,207 @@
+.reminderManager {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reminderForm {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reminderForm h4 {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.helpText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.remindersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.emptyState svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyState h4 {
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.reminderCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.reminderCard:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reminderCard.disabled {
+  opacity: 0.6;
+  background: #f1f5f9;
+}
+
+.reminderInfo {
+  flex: 1;
+}
+
+.reminderTime {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.repeatInfo {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: normal;
+}
+
+.reminderMedicine {
+  color: #374151;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.snoozeInfo,
+.disabledInfo {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.reminderActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* High contrast mode */
+:global(.high-contrast) .reminderCard {
+  border-width: 2px;
+  border-color: #000;
+}
+
+:global(.high-contrast) .reminderCard:hover {
+  border-color: #333;
+  background: #fff;
+}
+
+:global(.high-contrast) .reminderForm {
+  border-width: 2px;
+  border-color: #000;
+  background: #fff;
+}
+
+/* Large text mode */
+:global(.large-text) .reminderTime {
+  font-size: 1.125rem;
+}
+
+:global(.large-text) .reminderMedicine {
+  font-size: 1rem;
+}
+
+:global(.large-text) .helpText {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .headerActions {
+    align-self: stretch;
+  }
+  
+  .reminderCard {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .reminderActions {
+    align-self: flex-start;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+}

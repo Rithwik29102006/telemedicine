@@ -1,0 +1,54 @@
+.consultationForm {
+  padding: 2rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+}
+
+.formContent {
+  padding: 2rem;
+}
+
+.formContent h3 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.formContent p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.submitSection {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .consultationForm {
+    padding: 1rem 0;
+  }
+  
+  .formContent {
+    padding: 1.5rem;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .header h2 {
+    font-size: 1.25rem;
+  }
+}

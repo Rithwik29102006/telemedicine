@@ -1,0 +1,166 @@
+.prescriptionForm {
+  padding: 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+}
+
+.formContent {
+  padding: 2rem;
+}
+
+.patientInfo {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #2563eb;
+}
+
+.patientInfo h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.patientInfo p {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.medicationsSection {
+  margin: 2rem 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h4 {
+  color: #1e293b;
+}
+
+.medicationGroup {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.medicationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.medicationHeader h5 {
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.submitSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.blockchainStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.blockchainStatus.pending {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
+.blockchainStatus.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #059669;
+}
+
+.blockchainStatus.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #dc2626;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.submitSection > div:last-child {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .prescriptionForm {
+    padding: 1rem 0;
+  }
+  
+  .formContent {
+    padding: 1.5rem;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .patientInfo {
+    padding: 1rem;
+  }
+  
+  .medicationGroup {
+    padding: 1rem;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .submitSection {
+    gap: 0.75rem;
+  }
+  
+  .submitSection > div:last-child {
+    flex-direction: column;
+  }
+}

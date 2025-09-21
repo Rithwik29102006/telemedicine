@@ -1,0 +1,233 @@
+.settingsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.tabNavigation {
+  display: flex;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #374151;
+  background: #f8fafc;
+}
+
+.tab:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+.tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  background: #f8fafc;
+}
+
+.tabPanel {
+  animation: fadeIn 0.3s ease;
+}
+
+.settingsSection {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.settingsSection h3 {
+  color: #374151;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.settingItem {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.settingItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.settingLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.settingLabel input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.settingLabel:hover {
+  color: #1e293b;
+}
+
+.helpText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-left: 2rem;
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactInfo strong {
+  color: #1e293b;
+}
+
+.contactInfo span {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High contrast mode */
+:global(.high-contrast) .settingsSection {
+  border-width: 2px;
+  border-color: #000;
+}
+
+:global(.high-contrast) .tab {
+  border-width: 2px;
+}
+
+:global(.high-contrast) .tab.active {
+  background: #000;
+  color: #fff;
+}
+
+:global(.high-contrast) .contactItem {
+  border-width: 2px;
+  border-color: #000;
+}
+
+/* Large text mode */
+:global(.large-text) .settingLabel {
+  font-size: 1.125rem;
+}
+
+:global(.large-text) .helpText {
+  font-size: 1rem;
+}
+
+:global(.large-text) .tab {
+  font-size: 1.125rem;
+  padding: 1.25rem 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .settingsContainer {
+    padding: 1rem;
+  }
+  
+  .tabNavigation {
+    flex-direction: column;
+  }
+  
+  .tab {
+    justify-content: center;
+    border-bottom: none;
+    border-right: 3px solid transparent;
+  }
+  
+  .tab.active {
+    border-right-color: #2563eb;
+    border-bottom-color: transparent;
+  }
+  
+  .contactForm {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactItem {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .helpText {
+    margin-left: 0;
+  }
+}

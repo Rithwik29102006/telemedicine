@@ -1,0 +1,275 @@
+.dashboard {
+  padding: 2rem 0;
+}
+
+.accessibilityControls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.welcomeCard {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.welcomeCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcomeCard p {
+  opacity: 0.9;
+}
+
+.actionCard {
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.actionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.actionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.actionCard:hover::before {
+  left: 100%;
+}
+
+.cardIcon {
+  color: #2563eb;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.actionCard h3 {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.actionCard p {
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.prescriptionsView,
+.recordsView {
+  padding: 2rem 0;
+}
+
+.viewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.viewHeader h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+}
+
+.emptyState svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.emptyState p {
+  margin-bottom: 2rem;
+}
+
+.recordsContent {
+  padding: 1.5rem;
+}
+
+.recordsContent h3 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.recordItem {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.recordItem:last-child {
+  border-bottom: none;
+}
+
+.remindersView {
+  padding: 2rem 0;
+}
+
+.historyView {
+  padding: 0;
+}
+
+.viewHeader {
+  margin-bottom: 1rem;
+}
+
+.locationInfoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.locationInfoContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.locationInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.locationInfoHeader h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  background: #f1f5f9;
+  color: #374151;
+}
+
+.locationDetails {
+  padding: 1.5rem;
+}
+
+.locationDetails p {
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.locationDetails strong {
+  color: #1e293b;
+}
+
+.locationActions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.locationActions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem 0;
+  }
+  
+  .welcomeCard {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .welcomeCard h2 {
+    font-size: 1.25rem;
+  }
+  
+  .actionCard {
+    padding: 1.5rem;
+  }
+  
+  .viewHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .emptyState {
+    padding: 3rem 1rem;
+  }
+  
+  .locationInfoModal {
+    padding: 0.5rem;
+  }
+  
+  .locationInfoContent {
+    max-height: 95vh;
+  }
+  
+  .locationInfoHeader,
+  .locationDetails,
+  .locationActions {
+    padding: 1rem;
+  }
+  
+  .locationActions {
+    flex-direction: column;
+  }
+}

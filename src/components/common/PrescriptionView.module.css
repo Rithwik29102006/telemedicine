@@ -1,0 +1,180 @@
+.prescriptionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 1.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.prescriptionInfo h4 {
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.date {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.prescriptionActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.prescriptionContent {
+  padding: 1.5rem;
+}
+
+.blockchainInfo {
+  background: #f0f9ff;
+  border: 1px solid #0ea5e9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.blockchainHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+.verified {
+  color: #059669;
+}
+
+.blockchainDetails p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #374151;
+  font-family: monospace;
+}
+
+.verificationResult {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.verificationResult.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #059669;
+}
+
+.verificationResult.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #dc2626;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section h5 {
+  color: #374151;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.section p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.medications {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.medication {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 3px solid #2563eb;
+}
+
+.medName {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.medDosage {
+  color: #059669;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.medInstructions {
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.qrSection {
+  text-align: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.qrCode {
+  margin-bottom: 0.5rem;
+}
+
+.qrSection p {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .prescriptionHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .prescriptionActions {
+    align-self: flex-start;
+  }
+  
+  .blockchainHeader {
+    flex-wrap: wrap;
+  }
+  
+  .blockchainDetails p {
+    word-break: break-all;
+  }
+  
+  .prescriptionContent {
+    padding: 1rem;
+  }
+  
+  .medication {
+    padding: 0.75rem;
+  }
+}

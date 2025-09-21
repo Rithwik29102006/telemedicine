@@ -1,0 +1,131 @@
+.inventoryManager {
+  padding: 2rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.header h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+.formContent {
+  padding: 2rem;
+}
+
+.formContent h3 {
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.inventoryList {
+  margin-top: 2rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+}
+
+.emptyState svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.medicineCard {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.medicineInfo h4 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.medicineDetails {
+  margin-bottom: 1rem;
+}
+
+.medicineDetails p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.lowStock {
+  color: #dc2626 !important;
+  font-weight: 600;
+}
+
+.medicineActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .inventoryManager {
+    padding: 1rem 0;
+  }
+  
+  .header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header h2 {
+    flex: none;
+    width: 100%;
+  }
+  
+  .formContent {
+    padding: 1.5rem;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .medicineCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .medicineActions {
+    align-self: flex-start;
+  }
+  
+  .medicineDetails p {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

@@ -1,0 +1,15 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  define: {
+    global: 'globalThis',
+    'process.env': {},
+    'process.versions': JSON.stringify({ node: '0.0.0' })
+  },
+  optimizeDeps: {
+    exclude: ['lucide-react'],
+  },
+});

@@ -1,0 +1,197 @@
+.videoCallContainer {
+  min-height: 70vh;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.waitingRoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  color: white;
+  text-align: center;
+}
+
+.waitingContent h3 {
+  margin-bottom: 0.5rem;
+}
+
+.waitingContent p {
+  opacity: 0.8;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 2rem;
+}
+
+.videoCall {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.videoContainer {
+  flex: 1;
+  position: relative;
+  background: #0f172a;
+}
+
+.remoteVideo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.localVideo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 200px;
+  height: 150px;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.mockVideo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #374151, #4b5563);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mockAvatar {
+  text-align: center;
+  font-weight: 500;
+}
+
+.callInfo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.callDuration {
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.callControls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.controlBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controlBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.controlBtn.muted {
+  background: #dc2626;
+}
+
+.controlBtn.endCall {
+  background: #dc2626;
+}
+
+.controlBtn.endCall:hover {
+  background: #b91c1c;
+}
+
+.consultationInfo {
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+  right: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.infoContent {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 6px;
+}
+
+.infoContent h4 {
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.infoContent p {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .localVideo {
+    width: 120px;
+    height: 90px;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .callInfo {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  
+  .callControls {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .controlBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .consultationInfo {
+    left: 0.5rem;
+    right: 130px;
+    bottom: 3.5rem;
+  }
+  
+  .infoContent {
+    padding: 0.75rem;
+  }
+  
+  .infoContent p {
+    font-size: 0.8rem;
+  }
+}
